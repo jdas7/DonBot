@@ -28,4 +28,4 @@ class BehaveRunner:
         subprocess.call(command)
 
         # Generate Allure report after test execution
-        subprocess.call(["allure", "generate", "allure-results", "--clean"])
+        subprocess.call(["allure", "serve", "allure-results"])
