@@ -27,5 +27,10 @@ class BehaveRunner:
 
         subprocess.call(command)
 
-        # Generate Allure report after test execution
-        subprocess.call(["allure", "serve", "allure-results"])
+    @staticmethod
+    def generate_allure_report():
+        """
+        Generate Allure report from the results and open it.
+        """
+        subprocess.call(["allure", "generate", "allure-results"])
+        subprocess.call(["allure", "open"])
