@@ -26,3 +26,6 @@ class BehaveRunner:
             command.extend(["--tags", tags])
 
         subprocess.call(command)
+
+        # Generate Allure report after test execution
+        subprocess.call(["allure", "generate", "allure-results", "--clean"])
