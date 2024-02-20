@@ -17,7 +17,7 @@ class BehaveRunner:
 
         # Configuration of step and feature paths
         command.extend(["--steps", steps_path])
-        command.extend(["--no-capture", "--format", "allure_behave.formatter:AllureFormatter"])
+        command.extend(["--format", "allure_behave.formatter:AllureFormatter -o allure-results"])
         if features_path:
             command.extend([features_path])
 
